@@ -44,31 +44,7 @@ const filteredAndSortedUserList = computed(() =>
 // provide("sortKey", {
 //   sortedFilterUsersList,
 // });
-</script>
-
-<template>
-  <div>
-    <div class="control">
-      <Search v-model:filterParam="filterParam" />
-      <Sort v-model:sortParam="sortParam" />
-    </div>
-
-    <UserItem
-      v-for="({ name, surname, lastname }, index) in filteredAndSortedUserList"
-      :key="index"
-    >
-      <template #heading>{{ `${surname} ${name} ${lastname}` }}</template>
-      Адрес пользака
-    </UserItem>
-  </div>
-</template>
-
-<style scoped>
-.control {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-}
-</style> -->
+</script>-->
 
 <script>
 import Search from "@/components/Search.vue";
@@ -129,7 +105,7 @@ export default {
       :key="index"
     >
       <template #heading>{{ `${surname} ${name} ${lastname}` }}</template>
-      Адрес пользака
+      Адрес пользователя
     </UserItem>
   </div>
 </template>
